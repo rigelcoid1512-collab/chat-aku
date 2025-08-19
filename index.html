@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat Publik</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Layar Login -->
+    <div id="loginScreen" class="screen">
+      <h1>💬 Chat Aja Dulu</h1>
+      <p>Buat nama samaran & mulai ngobrol!</p>
+      <input type="text" id="username" placeholder="Nama samaran kamu" />
+      <button id="loginBtn">🔐 Masuk dengan Google</button>
+      <p id="loginStatus"></p>
+    </div>
+
+    <!-- Layar Chat -->
+    <div id="chatScreen" class="screen hidden">
+      <div id="chatBox">
+        <div id="messages"></div>
+      </div>
+      <div id="inputArea">
+        <input type="text" id="messageInput" placeholder="Ketik pesan..." />
+        <button id="sendBtn">Kirim</button>
+      </div>
+      <button id="logoutBtn">🚪 Logout</button>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
